@@ -18,7 +18,7 @@ class HeapTree<T extends Comparable<T>>{
 	}
 
 	public boolean isFull(){
-		return size==buffer.length-1;
+		return size==buffer.length;
 	}
 
 	public boolean isEmpty(){
@@ -26,7 +26,7 @@ class HeapTree<T extends Comparable<T>>{
 	}
 
 	public void insert(T val){
-		if(isEmpty()){
+		if(isFull()){
 			throw new IllegalStateException(
 					"HeapTree is full, no more insert.");
 		}

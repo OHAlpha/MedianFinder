@@ -26,7 +26,7 @@ public class MedianFinder <T extends Comparable<T>>{
 			return;
 		}
 
-		T min = minHeap.delete();
+		T min = minHeap.peek();
 
 		if(val.compareTo(min)==1){
 			minHeap.insert(val);
